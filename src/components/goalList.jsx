@@ -19,7 +19,7 @@ class GoalList extends Component {
 
   render() {
     return (
-      <div style = {{height: 500, width: 700, overflowY: "scroll", backgroundColor:"gray"}}>
+      <div style = {{height: 300, width: 700, overflowY: "scroll", backgroundColor:"gray"}}>
         {
           this.props.goals.map((goal, index) => {
             return (
