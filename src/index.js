@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import reducer from './reducers';
+import App from './components/app';
+import SignUp from './components/signUp';
+import SignIn from './components/signIn';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { Router, Route, browserHistory } from 'react-router';
 import { firebaseApp } from './firebase';
-import reducer from './reducers';
 import { logUser } from './actions';
-
-import App from './components/app';
-import SignUp from './components/signUp';
-import SignIn from './components/signIn';
 
 const store = createStore(reducer);
 
@@ -26,9 +25,9 @@ firebaseApp.auth().onAuthStateChanged(user => {
 ReactDOM.render(
   <Provider store = { store }>
     <Router path = "/" history = { browserHistory }>
-        <Route path = "/app" component = {App} />
-        <Route path = "/signin" component = {SignIn} />
-        <Route path = "/signup" component = {SignUp} />
+        <Route path = "/app" component = { App } />
+        <Route path = "/signin" component = { SignIn } />
+        <Route path = "/signup" component = { SignUp } />
     </Router>
   </Provider>, document.getElementById('root')
 )
