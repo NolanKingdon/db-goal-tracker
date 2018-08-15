@@ -15,3 +15,4 @@ If you want to run this you will need your own Firebase file from firebase.googl
 ### Function
 
 Any member can put in a task that will be added to the pile. Any user can complete this. The user who completes this will be associated with the complete task in the 'completed' view.
+
